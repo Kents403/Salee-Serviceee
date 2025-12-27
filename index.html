@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALEE SERVIS - PUBG UC & Telegram Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1><i class="fas fa-crown"></i> SALEE SERVIS</h1>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home"><i class="fas fa-home"></i> Bosh Sahifa</a></li>
+                    <li><a href="#games"><i class="fas fa-gamepad"></i> PUBG UC</a></li>
+                    <li><a href="#telegram"><i class="fab fa-telegram"></i> Telegram</a></li>
+                    <li><a href="#contact"><i class="fas fa-headset"></i> Bog'lanish</a></li>
+                </ul>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>PUBG UC va Telegram Premium</h2>
+                <p>Eng arzon narxlarda - 100% ishonchli xizmat</p>
+                <a href="#games" class="btn-primary">Mahsulotlarni Ko'rish</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="games">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-gamepad"></i> PUBG UC</h2>
+            <div class="tabs" id="gameTabs">
+                <button class="tab-btn active" data-category="pubg">PUBG UC</button>
+            </div>
+            <div class="products" id="gameProducts"></div>
+        </div>
+    </section>
+
+    <section class="section bg-light" id="telegram">
+        <div class="container">
+            <h2 class="section-title"><i class="fab fa-telegram"></i> Telegram Mahsulotlari</h2>
+            <div class="tabs" id="telegramTabs">
+                <button class="tab-btn active" data-category="premium">Premium</button>
+                <button class="tab-btn" data-category="stars">Stars</button>
+            </div>
+            <div class="products" id="telegramProducts"></div>
+        </div>
+    </section>
+
+    <section class="section bg-dark" id="about">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Biz haqimizda</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fas fa-rocket about-icon"></i>
+                    <h3>Bizning missiyamiz</h3>
+                    <p>O'zbekiston bo'ylab PUBG va Telegram foydalanuvchilariga eng arzon va ishonchli xizmatlarni taqdim etish.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-shield-alt about-icon"></i>
+                    <h3>Kafolatimiz</h3>
+                    <p>Barcha tranzaksiyalar 100% xavfsiz va kafolatlangan. Agar muammo bo'lsa, pulingizni qaytaramiz.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-bolt about-icon"></i>
+                    <h3>Tezlik</h3>
+                    <p>PUBG UC va Telegram mahsulotlar <strong>5-60 daqiqada bajariladi</strong>.</p>
+                </div>
+            </div>
+            
+            <div class="telegram-channel">
+                <i class="fab fa-telegram channel-icon"></i>
+                <h3>Barcha yangiliklardan xabardor bo'ling!</h3>
+                <p>Eng so'nggi chegirmalar, yangi mahsulotlar va aksiyalar haqida birinchi bo'lib bilish uchun telegram kanalimizga obuna bo'ling.</p>
+                <a href="https://t.me/salee_servis" class="btn-telegram-channel" target="_blank">
+                    <i class="fab fa-telegram"></i> @salee_servis kanaliga o'tish
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-dark" id="contact">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-headset"></i> Bog'lanish</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fab fa-telegram"></i>
+                    <h3>Telegram Support</h3>
+                    <p>Buyurtma berish yoki savollar</p>
+                    <a href="https://t.me/salee_uz" class="btn-telegram" target="_blank">
+                        @salee_uz
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Tez Yetkazish</h3>
+                    <p>PUBG UC va Telegram mahsulotlar</p>
+                    <p><strong>5-60 daqiqada bajariladi</strong></p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Ish vaqtimiz</h3>
+                    <p>Ertalab 7:00 dan</p>
+                    <p>Kechki 23:00 gacha</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-cart"></i> Savatingiz</h3>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div class="cart-body">
+                <div class="cart-items" id="cartItems"></div>
+                <div class="cart-total">
+                    Jami: <span id="cartTotal">0</span> UZS
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="order-form-container" id="orderFormContainer">
+                    <h3><i class="fas fa-file-alt"></i> Buyurtma ma'lumotlari</h3>
+                    
+                    <div class="form-step" id="customerStep">
+                        <div class="step-title">
+                            <i class="fas fa-user"></i> Mijoz ma'lumotlari
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-user-circle"></i> Ismingiz *</label>
+                            <input type="text" id="customerName" placeholder="To'liq ismingizni kiriting" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fab fa-telegram"></i> Telegram username *</label>
+                            <input type="text" id="telegramUsername" placeholder="@username yoki telefon raqam">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-gamepad"></i> PUBG ID / Username *</label>
+                            <input type="text" id="gameId" placeholder="PUBG o'yin ID yoki username">
+                        </div>
+                    </div>
+                    
+                    <div class="form-step" id="productTypeStep" style="display: none;">
+                        <div class="step-title">
+                            <i class="fas fa-tags"></i> Mahsulot turi
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Qaysi turdagi mahsulot? *</label>
+                            <select id="productType" required>
+                                <option value="">Tanlang</option>
+                                <option value="pubg">PUBG UC</option>
+                                <option value="telegram">Telegram Premium/Stars</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-sticky-note"></i> Qo'shimcha izoh (ixtiyoriy)</label>
+                            <textarea id="orderNotes" placeholder="Qo'shimcha talablar yoki izohlar..." rows="3"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="order-summary">
+                        <div class="summary-item">
+                            <span>Mahsulotlar soni:</span>
+                            <span id="productCount">0 ta</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Jami summa:</span>
+                            <span id="orderTotal">0</span> UZS
+                        </div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" class="btn-back" id="backBtn" style="display: none;">
+                            <i class="fas fa-arrow-left"></i> Orqaga
+                        </button>
+                        <button type="button" class="btn-submit" id="nextBtn">
+                            Keyingi qadam <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button type="button" class="btn-send-telegram" id="sendTelegramBtn" style="display: none;">
+                            <i class="fab fa-telegram"></i> Telegramga yuborish
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><i class="fas fa-crown"></i> SALEE SERVIS</h3>
+                    <p>O'zbekistonning eng ishonchli PUBG va Telegram xizmatlari provayderi</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Tez havolalar</h3>
+                    <a href="#games">PUBG UC</a>
+                    <a href="#telegram">Telegram mahsulotlari</a>
+                    <a href="#contact">Bog'lanish</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Ijtimoiy tarmoqlar</h3>
+                    <a href="https://t.me/salee_servis" target="_blank">
+                        <i class="fab fa-telegram"></i> Telegram kanal
+                    </a>
+                    <a href="https://t.me/salee_uz" target="_blank">
+                        <i class="fab fa-telegram"></i> Support
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SALEE SERVIS. Barcha huquqlar himoyalangan.</p>
+                <p class="footer-text">100% xavfsiz va ishonchli xizmat</p>
+                <p class="footer-text">sizgaham shunaqa sayt kerak bo'lsa pasdagi adminga murojat qiling.</p>
+                <p class="footer-text">Admin: @ownerkents</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="bot.js"></script>
+</body>
+</html>
